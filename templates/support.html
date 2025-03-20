@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+
+{% block title %}기술지원 - JYT 제이와이티{% endblock %}
+
+{% block content %}
+<!-- 히어로 섹션 -->
+<section class="hero-section" style="background-image: url('{{ url_for('static', filename='images/support.jpg') }}'); background-position: center 35%;">
+    <div class="container">
+        <h1 class="display-4 fw-bold mb-4">기술 지원</h1>
+        <p class="lead mb-0">전문가의 신속하고 정확한 기술 지원</p>
+    </div>
+</section>
+
+<!-- 기술 지원 서비스 -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4">
+            <!-- 기술 문의 -->
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-headset fa-3x text-primary mb-3"></i>
+                        <h3 class="card-title">기술 문의</h3>
+                        <p class="card-text">전문 엔지니어가 24시간 내에 답변 드립니다.</p>
+                        <ul class="list-unstyled text-start">
+                            <li><i class="fas fa-check text-success me-2"></i>전화 상담</li>
+                            <li><i class="fas fa-check text-success me-2"></i>이메일 문의</li>
+                            <li><i class="fas fa-check text-success me-2"></i>원격 지원</li>
+                        </ul>
+                        <a href="{{ url_for('contact') }}" class="btn btn-primary mt-3">문의하기</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 교육 서비스 -->
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-chalkboard-teacher fa-3x text-primary mb-3"></i>
+                        <h3 class="card-title">교육 서비스</h3>
+                        <p class="card-text">제품 사용법과 프로그래밍 교육을 제공합니다.</p>
+                        <ul class="list-unstyled text-start">
+                            <li><i class="fas fa-check text-success me-2"></i>기초 교육</li>
+                            <li><i class="fas fa-check text-success me-2"></i>고급 교육</li>
+                            <li><i class="fas fa-check text-success me-2"></i>맞춤 교육</li>
+                        </ul>
+                        <a href="{{ url_for('contact') }}" class="btn btn-primary mt-3">교육 신청</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 유지보수 -->
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-tools fa-3x text-primary mb-3"></i>
+                        <h3 class="card-title">유지보수</h3>
+                        <p class="card-text">정기적인 점검과 유지보수 서비스를 제공합니다.</p>
+                        <ul class="list-unstyled text-start">
+                            <li><i class="fas fa-check text-success me-2"></i>정기 점검</li>
+                            <li><i class="fas fa-check text-success me-2"></i>부품 교체</li>
+                            <li><i class="fas fa-check text-success me-2"></i>시스템 업그레이드</li>
+                        </ul>
+                        <a href="{{ url_for('contact') }}" class="btn btn-primary mt-3">유지보수 신청</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 다운로드 -->
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-download fa-3x text-primary mb-3"></i>
+                        <h3 class="card-title">다운로드</h3>
+                        <p class="card-text">드라이버, 매뉴얼, 소프트웨어를 다운로드할 수 있습니다.</p>
+                        <ul class="list-unstyled text-start">
+                            <li><i class="fas fa-check text-success me-2"></i>드라이버</li>
+                            <li><i class="fas fa-check text-success me-2"></i>매뉴얼</li>
+                            <li><i class="fas fa-check text-success me-2"></i>소프트웨어</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary mt-3">다운로드</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ 섹션 -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">자주 묻는 질문</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="accordion" id="faqAccordion">
+                    <!-- FAQ 항목 1 -->
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                EtherCAT 마스터 컨트롤러의 최대 축 수는 몇 개인가요?
+                            </button>
+                        </h3>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                최대 64축까지 제어가 가능하며, 확장 모듈을 통해 더 많은 축을 제어할 수 있습니다.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ 항목 2 -->
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                모션 제어 소프트웨어는 어떤 프로그래밍 언어를 지원하나요?
+                            </button>
+                        </h3>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                C++, C#, Python, LabVIEW 등 다양한 프로그래밍 언어를 지원합니다.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ 항목 3 -->
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                기술 지원은 어떤 방식으로 제공되나요?
+                            </button>
+                        </h3>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                전화, 이메일, 원격 지원 등 다양한 채널을 통해 기술 지원을 제공합니다.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 

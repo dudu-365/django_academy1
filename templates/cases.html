@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+{% block title %}성공사례 - JYT 제이와이티{% endblock %}
+
+{% block content %}
+<!-- 히어로 섹션 -->
+<section class="hero-section" style="background-image: url('{{ url_for('static', filename='images/case2.jpg') }}'); background-position: center 45%;">
+    <div class="container">
+        <h1 class="display-4 fw-bold mb-4">성공 사례</h1>
+        <p class="lead mb-0">고객과 함께 만들어가는 성공 스토리</p>
+    </div>
+</section>
+
+<!-- 성공사례 섹션 -->
+<section class="success-stories-section">
+    <div class="container py-5">
+        <div class="row g-4">
+            <!-- 성공사례 1 -->
+            <div class="col-lg-6">
+                <div class="success-card">
+                    <img src="{{ url_for('static', filename='images/case1.jpg') }}" alt="반도체 제조 공정" class="success-image">
+                    <div class="success-content">
+                        <span class="industry-badge">반도체</span>
+                        <h3>반도체 제조 공정 자동화</h3>
+                        <p class="mb-4">EtherCAT 기반 모션 제어 시스템으로 생산성 300% 향상</p>
+                        <div class="success-stats">
+                            <div class="stat">
+                                <span class="stat-number">300%</span>
+                                <span class="stat-label">생산성 향상</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">50%</span>
+                                <span class="stat-label">비용 절감</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 성공사례 2 -->
+            <div class="col-lg-6">
+                <div class="success-card">
+                    <img src="{{ url_for('static', filename='images/case2.jpg') }}" alt="자동차 생산" class="success-image">
+                    <div class="success-content">
+                        <span class="industry-badge">자동차</span>
+                        <h3>자동차 생산 라인 개선</h3>
+                        <p class="mb-4">스마트 팩토리 구축으로 불량률 90% 감소</p>
+                        <div class="success-stats">
+                            <div class="stat">
+                                <span class="stat-number">90%</span>
+                                <span class="stat-label">불량률 감소</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">200%</span>
+                                <span class="stat-label">생산량 증가</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 성공사례 3 -->
+            <div class="col-lg-6">
+                <div class="success-card">
+                    <img src="{{ url_for('static', filename='images/case3.jpg') }}" alt="협동로봇 자동화" class="success-image">
+                    <div class="success-content">
+                        <span class="industry-badge">스마트팩토리</span>
+                        <h3>협동로봇 기반 공장 자동화</h3>
+                        <p class="mb-4">고정밀 모션 제어 기술로 생산 효율 180% 향상</p>
+                        <div class="success-stats">
+                            <div class="stat">
+                                <span class="stat-number">180%</span>
+                                <span class="stat-label">생산 효율</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">45%</span>
+                                <span class="stat-label">작업시간 단축</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 성공사례 4 - 자율주행 로봇 -->
+            <div class="col-lg-6">
+                <div class="success-card">
+                    <img src="{{ url_for('static', filename='images/case4.jpg') }}" alt="자율주행 로봇" class="success-image">
+                    <div class="success-content">
+                        <span class="industry-badge">로보틱스</span>
+                        <h3>물류 자율주행 로봇 시스템</h3>
+                        <p class="mb-4">정밀 모션 제어로 물류 운송 효율 150% 향상</p>
+                        <div class="success-stats">
+                            <div class="stat">
+                                <span class="stat-number">150%</span>
+                                <span class="stat-label">운송 효율</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">60%</span>
+                                <span class="stat-label">인건비 절감</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 

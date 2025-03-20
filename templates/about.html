@@ -1,0 +1,253 @@
+{% extends "base.html" %}
+
+{% block title %}회사소개 - JYT 제이와이티{% endblock %}
+
+{% block content %}
+<!-- 히어로 섹션 -->
+<section class="hero-section" style="background-image: url('{{ url_for('static', filename='images/industrial-automation-bg2.jpg') }}'); background-position: center 40%;">
+    <div class="container">
+        <h1 class="display-4 fw-bold mb-4">회사 소개</h1>
+        <p class="lead mb-0">산업 자동화 솔루션의 선도기업</p>
+    </div>
+</section>
+
+<!-- 회사 소개 섹션 -->
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h2 class="section-title text-start display-4 fw-bold mb-4">JYT 제이와이티</h2>
+                <p class="lead mb-4">산업 자동화 분야의 혁신적인 솔루션을 제공하는 글로벌 기업입니다.</p>
+                <p class="mb-4">2021년 설립된 JYT는 EtherCAT 모션 제어 솔루션의 선도기업으로, 
+                반도체, 자동차, 로봇 등 다양한 산업 분야에서 최고의 기술력을 인정받고 있습니다.</p>
+                <div class="row g-4 mt-4">
+                    <div class="col-6">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-users fa-2x text-primary me-3"></i>
+                            <div>
+                                <h4 class="mb-0">100+</h4>
+                                <p class="mb-0">전문 인력</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-globe fa-2x text-primary me-3"></i>
+                            <div>
+                                <h4 class="mb-0">20+</h4>
+                                <p class="mb-0">진출 국가</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <img src="{{ url_for('static', filename='images/company.jpg') }}" 
+                     class="img-fluid rounded-3 shadow" alt="회사 전경">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 비전 & 미션 섹션 -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-5">
+                        <i class="fas fa-eye fa-3x text-primary mb-4"></i>
+                        <h3 class="card-title fw-bold">비전</h3>
+                        <p class="card-text">산업 자동화의 미래를 선도하는 글로벌 기업</p>
+                        <p class="card-text">최고의 기술력과 서비스로 고객의 성공을 돕습니다.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-5">
+                        <i class="fas fa-bullseye fa-3x text-primary mb-4"></i>
+                        <h3 class="card-title fw-bold">미션</h3>
+                        <p class="card-text">혁신적인 솔루션으로 산업의 발전에 기여</p>
+                        <p class="card-text">지속적인 연구개발과 기술 혁신을 추구합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 회사 정보 섹션 -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="section-title fw-bold mb-5">회사 정보</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <table class="table table-borderless">
+                            <tbody>
+                                <tr>
+                                    <th class="w-25">회사명</th>
+                                    <td>JYT 제이와이티</td>
+                                </tr>
+                                <tr>
+                                    <th>대표자</th>
+                                    <td>홍길동</td>
+                                </tr>
+                                <tr>
+                                    <th>주소</th>
+                                    <td>서울특별시 강남구 테헤란로 123</td>
+                                </tr>
+                                <tr>
+                                    <th>연락처</th>
+                                    <td>02-1234-5678</td>
+                                </tr>
+                                <tr>
+                                    <th>이메일</th>
+                                    <td>info@jyt.com</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 연혁 섹션 -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title fw-bold mb-5">연혁</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-date">2024</div>
+                <div class="timeline-content">
+                    <h4>글로벌 진출 가속화</h4>
+                    <p>미국, 유럽, 중국 등 해외 시장 진출</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2023</div>
+                <div class="timeline-content">
+                    <h4>기술 혁신상 수상</h4>
+                    <p>산업부 장관상 수상</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2022</div>
+                <div class="timeline-content">
+                    <h4>연구소 설립</h4>
+                    <p>자체 연구소 설립 및 R&D 강화</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2021</div>
+                <div class="timeline-content">
+                    <h4>회사 설립</h4>
+                    <p>JYT 제이와이티 설립</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: var(--primary-color);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    width: 50%;
+    padding-right: 2rem;
+}
+
+.timeline-item:nth-child(even) {
+    margin-left: 50%;
+    padding-right: 0;
+    padding-left: 2rem;
+}
+
+.timeline-date {
+    position: absolute;
+    right: -2rem;
+    top: 0;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-weight: 500;
+}
+
+.timeline-item:nth-child(even) .timeline-date {
+    right: auto;
+    left: -2rem;
+}
+
+.timeline-content {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.timeline-content h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 0;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 2rem;
+        padding-right: 0;
+        margin-left: 0;
+    }
+    
+    .timeline-date {
+        left: -2rem;
+        right: auto;
+    }
+}
+
+.section-title {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+{% endblock %} 

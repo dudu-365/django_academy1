@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+{% block title %}제품소개 - JYT 제이와이티{% endblock %}
+
+{% block content %}
+<!-- 히어로 섹션 -->
+<section class="hero-section" style="background-image: url('{{ url_for('static', filename='images/products.jpg') }}'); background-position: center 60%;">
+    <div class="container">
+        <h1 class="display-4 fw-bold mb-4">제품 소개</h1>
+        <p class="lead mb-0">혁신적인 모션 제어 솔루션</p>
+    </div>
+</section>
+
+<!-- 제품 목록 -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4">
+            <!-- EtherCAT 마스터 컨트롤러 -->
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title">EtherCAT 마스터 컨트롤러</h3>
+                        <p class="card-text">고성능 EtherCAT 마스터 컨트롤러로 정밀한 모션 제어를 구현합니다.</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i>고속 통신 지원</li>
+                            <li><i class="fas fa-check text-success me-2"></i>다중 축 제어</li>
+                            <li><i class="fas fa-check text-success me-2"></i>실시간 모니터링</li>
+                        </ul>
+                        <a href="{{ url_for('contact') }}" class="btn btn-primary mt-3">문의하기</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 모션 제어 소프트웨어 -->
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title">모션 제어 소프트웨어</h3>
+                        <p class="card-text">직관적인 인터페이스로 쉽고 효율적인 모션 제어가 가능합니다.</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i>그래픽 프로그래밍</li>
+                            <li><i class="fas fa-check text-success me-2"></i>시뮬레이션 기능</li>
+                            <li><i class="fas fa-check text-success me-2"></i>다국어 지원</li>
+                        </ul>
+                        <a href="{{ url_for('contact') }}" class="btn btn-primary mt-3">문의하기</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- I/O 모듈 -->
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title">I/O 모듈</h3>
+                        <p class="card-text">다양한 산업용 I/O 모듈로 시스템 확장성을 제공합니다.</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i>디지털 I/O</li>
+                            <li><i class="fas fa-check text-success me-2"></i>아날로그 I/O</li>
+                            <li><i class="fas fa-check text-success me-2"></i>안전 I/O</li>
+                        </ul>
+                        <a href="{{ url_for('contact') }}" class="btn btn-primary mt-3">문의하기</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 통신 게이트웨이 -->
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title">통신 게이트웨이</h3>
+                        <p class="card-text">다양한 산업용 통신 프로토콜을 지원하는 게이트웨이입니다.</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i>Modbus 지원</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Profibus 지원</li>
+                            <li><i class="fas fa-check text-success me-2"></i>DeviceNet 지원</li>
+                        </ul>
+                        <a href="{{ url_for('contact') }}" class="btn btn-primary mt-3">문의하기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style>
+.card {
+    transition: transform 0.3s;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+.application-card, .advantage-card {
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+.application-card:hover, .advantage-card:hover {
+    transform: translateY(-5px);
+}
+</style>
+{% endblock %} 
